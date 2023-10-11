@@ -33,3 +33,16 @@
     - sudo service amazon-ssm-agent stop
     - sudo amazon-ssm-agent -register -code "activation-code" -id "activation-id" -region "us-east-1"
     - sudo service amazon-ssm-agent start
+
+## Create AWS IoT
+1. Connect a device from AWS IoT Core
+    - Select Connect a device button
+    - test a ping connection from your pi to your AWS IoT (click next)
+    - Enter a Thing name (click next)
+    - Select Linix for device OS and choose your SDK. (recomend Python) (click next)
+    - download connection kit
+    - copy it to your S3 bucket
+    - From your pi command line download, unpack, setup and start the connection kit)
+        - aws s3 cp s3//bucketnameXX/connection_device_package.zip ./
+        - follow instructions and run the kit
+    - 
