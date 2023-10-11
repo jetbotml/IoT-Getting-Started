@@ -39,7 +39,7 @@
 1. Test a ping connection from your pi to your AWS IoT (click next)
 1. Enter a Thing name (click next)
 1. Select Linix for device OS and choose your SDK. (recomend Python) (click next)
-1. dDownload connection kit
+1. Download connection kit
 1. Copy connection kit to your S3 bucket
 1. From your pi command line; download, unpack, setup and start the connection kit
     - aws s3 cp s3//bucketnameXX/connection_device_package.zip ./
