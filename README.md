@@ -1,6 +1,6 @@
 # AWS IoT using a Raspberry Pi
 
-## Prep AWS (Create AWS S3 bucket, IAM role and (optional) SSM activation)
+## Prep AWS: Create AWS S3 bucket, IAM role and (optional) SSM activation
 
 1. Create S3 bucket from the Amazon S3 Service
     - Select Create bucket
