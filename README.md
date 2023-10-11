@@ -37,12 +37,12 @@
 ## Create AWS IoT
 1. Connect a device from AWS IoT Core
     - Select Connect a device button
-    - test a ping connection from your pi to your AWS IoT (click next)
+    - Test a ping connection from your pi to your AWS IoT (click next)
     - Enter a Thing name (click next)
     - Select Linix for device OS and choose your SDK. (recomend Python) (click next)
-    - download connection kit
-    - copy it to your S3 bucket
-    - From your pi command line download, unpack, setup and start the connection kit)
+    - dDownload connection kit
+    - Copy connection kit to your S3 bucket
+    - From your pi command line download, unpack, setup and start the connection kit
         - aws s3 cp s3//bucketnameXX/connection_device_package.zip ./
         - follow instructions and run the kit
-    - 
+
