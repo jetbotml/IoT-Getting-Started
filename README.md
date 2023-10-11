@@ -1,1 +1,35 @@
-# IoT-Getting-Started
+# AWS IoT using a Raspberry Pi
+
+## Prep AWS (Create AWS S3 bucket, IAM role and (optional) SSM activation)
+
+1. Create S3 bucket from the Amazon S3 Service
+    - Select Create bucket
+    - Bucket name: (must be unique - see rules for bucket naming) someting like your initials + date + iotpi. (all lowercase, numbers, no spaces)
+    - keep defaults - select Create bucket button
+1. Create Role with S3 download permissions from IAM
+    - Select User
+    - Select Create User. User name: PiS3Download, then select Next
+    - Add Access Key: Command Line Interface (CLI)
+    - Download user access key and secret
+1. Create SSM activation from AWS Systems Manager/Node Management/Hybird Activations
+    - Select Create activation
+    - Enter Activation Date (needs to be a few days in advance)
+    - Select Create activation button
+    - Copy the "activation-code" -id "activation-id" for use later
+
+
+## Prep Raspberry Pi
+1. Flash latest OS image
+    - Use Raspberry Pi Imager (https://www.raspberrypi.com/software/)
+    - Select Raspberry Pi OS (64 bit)
+1. Boot the Pi and follow instructions
+1. Install AWS CLI
+    - sudo apt install awscli -y
+    - run aws configure - input the access key and secret
+    - test run aws s3 ls
+1. Install SSM Agent
+    - sudo curl https://s3.us-east-2.amazonaws.com/amazon-ssm-us-east-2/latest/debian_arm64/amazon-ssm-agent.deb -o amazon-ssm-agent.deb
+    - sudo dpkg -i amazon-ssm-agent.deb
+    - sudo service amazon-ssm-agent stop
+    - sudo amazon-ssm-agent -register -code "activation-code" -id "activation-id" -region "us-east-1"
+    - sudo service amazon-ssm-agent start
