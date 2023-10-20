@@ -62,3 +62,7 @@
    - python3 mypubsub.py --endpoint......
   
 1. Copy updated file to mystart.sh location
+
+
+Publish
+![image](https://github.com/jetbotml/IoT-Getting-Started/assets/66527036/12c945ab-3359-4b25-93e0-43bbc4510fc8)
