@@ -66,6 +66,6 @@
 
 ![image](https://github.com/jetbotml/IoT-Getting-Started/assets/66527036/80dccac1-ec5f-4768-b746-88c690323e8b | width=50)
 
-
+![image](https://github.com/jetbotml/IoT-Getting-Started/assets/66527036/eb22dba1-a802-462a-8d9f-8d360309c88a | width=50)
 
 
