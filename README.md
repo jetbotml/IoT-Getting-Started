@@ -45,7 +45,7 @@
     - aws s3 cp s3//bucketnameXX/connection_device_package.zip ./
     - follow instructions and run the kit
 
-## Sent Pi system data
+## Send Pi system data to AWS IoT
 1. make a copy of the start.sh
     - cp start.sh mystart.sh
 1. add the following to the nystart.sh before the # run pub/sub sample app using certificates downloaded in package
