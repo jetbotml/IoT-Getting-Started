@@ -64,6 +64,6 @@
 1. Copy updated file to mystart.sh location
 
 
-Publish
-![image](https://github.com/jetbotml/IoT-Getting-Started/assets/66527036/d986993a-399e-460d-bed9-565e631678ce)
+![image](https://github.com/jetbotml/IoT-Getting-Started/assets/66527036/ef20d762-207f-447f-95fe-81c919f90f23)
+
 
