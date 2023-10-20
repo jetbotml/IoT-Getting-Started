@@ -65,4 +65,5 @@
 
 
 Publish
-![image](https://github.com/jetbotml/IoT-Getting-Started/assets/66527036/12c945ab-3359-4b25-93e0-43bbc4510fc8)
+![image](https://github.com/jetbotml/IoT-Getting-Started/assets/66527036/d986993a-399e-460d-bed9-565e631678ce)
+
