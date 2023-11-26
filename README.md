@@ -54,10 +54,10 @@
     - cp start.sh mystart.sh
 1. add the following to the mystart.sh before the # run pub/sub sample app using certificates downloaded in package
    ```python
-    if [ ! -d ./utils ]; then
-      printf "\nCloning the util folder...\n"
-      cp -r ~/aws-iot-device-sdk-python-v2/samples/utils ~/
-    fi
+   if [ ! -d ./utils ]; then
+     printf "\nCloning the util folder...\n"
+     cp -r ~/aws-iot-device-sdk-python-v2/samples/utils ~/
+   fi
     ```
 1. Modify the last line in the mystart.sh remove the path and rename the file 
    - from
