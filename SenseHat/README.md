@@ -16,7 +16,9 @@ Reference: https://pythonhosted.org/sense-hat/
 Install the Sense HAT software by opening a Terminal window and entering the following commands (while connected to the Internet):
 
 sudo apt-get update
+
 sudo apt-get install sense-hat
+
 sudo reboot
 
 ### Use
