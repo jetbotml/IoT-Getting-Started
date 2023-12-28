@@ -23,7 +23,7 @@ Install the Sense HAT software by opening a Terminal window and entering the fol
 Example IoT data from https://github.com/jetbotml/IoT-Getting-Started/blob/main/SenseHat/myshpubsub.py
 Change IoT Policy to https://github.com/jetbotml/IoT-Getting-Started/blob/main/SenseHat/policy.txt
 
-<img src='https://github.com/jetbotml/IoT-Getting-Started/blob/main/SenseHat/IoTDataExample.png' width="40%" height="40%">
+<img src='https://github.com/jetbotml/IoT-Getting-Started/blob/main/SenseHat/IoTDataExample2.png' width="40%" height="40%">
 
 
 
