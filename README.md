@@ -1,6 +1,6 @@
 # AWS IoT using a Raspberry Pi
 
-### Update 12/28/23
+Update 12/28/23
 
 ## Prep AWS: Create AWS S3 bucket, IAM role and (optional) SSM activation
 
