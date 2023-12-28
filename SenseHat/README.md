@@ -26,5 +26,5 @@ Install the Sense HAT software by opening a Terminal window and entering the fol
 <img src='https://github.com/jetbotml/IoT-Getting-Started/blob/main/SenseHat/IoTDataExample2.png' width="40%" height="40%">
 
 Use AWS IoT to publish message and change the color on the sense-hat leds.
-The pi is looking for red, green and/or blue in the meesage.
+The pi is looking for red, green and/or blue in the message.
 
