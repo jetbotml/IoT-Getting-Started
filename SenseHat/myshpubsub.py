@@ -131,29 +131,25 @@ def on_resubscribe_complete(resubscribe_future):
 # Callback when the subscribed topic receives a message
 def on_message_received(topic, payload, dup, qos, retain, **kwargs):
     print("Received message from topic '{}': {}".format(topic, payload))
-    print(payload)
-    # Process the message payload
-    # Add your own processing logic here based on the payload content
+    Red = 0
+    Green = 0
+    Blue = 0
+
     if topic == message_Subtopic:
         message = str(payload)
+        message = message.lower()
+        print("Message = " + message)
         # Example processing for a specific topic
         if "red" in message:
-            sense.clear([255, 0, 0])
-            print("red found")
-        elif "green" in message:
-            sense.clear([0, 255, 0])
-            print("greenfound")
-        elif "blue" in message:
-            sense.clear([0, 0, 255])
-            print("bluefound")
-        elif "clear" in message:
-            sense.clear(0, 0, 0)
-            print("clearfound")
-        else:
-            print("Unknown command received")
-            sense.show_message("Unknown", text_colour=[255, 0, 0])
-            time.sleep(1)            
-            sense.clear(0, 0, 0)
+            Red = 255
+        if "green" in message:
+            Green = 255
+        if "blue" in message:
+            Blue = 255
+ 
+    print("Color set to (" + str(Red) + ", " + str(Green) + ", " + str(Blue) +")" )
+        
+    sense.clear(Red, Green, Blue)
 
     global received_count
     received_count += 1
