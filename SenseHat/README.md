@@ -20,10 +20,11 @@ Install the Sense HAT software by opening a Terminal window and entering the fol
 - **sudo reboot**
 
 ### publish Sense HAT data 
-Example IoT data from https://github.com/jetbotml/IoT-Getting-Started/blob/main/SenseHat/myshpubsub.py
-Change IoT Policy to https://github.com/jetbotml/IoT-Getting-Started/blob/main/SenseHat/policy.txt
+1. Use updated python file https://github.com/jetbotml/IoT-Getting-Started/blob/main/SenseHat/myshpubsub.py
+2. Change IoT Policy to https://github.com/jetbotml/IoT-Getting-Started/blob/main/SenseHat/policy.txt
 
 <img src='https://github.com/jetbotml/IoT-Getting-Started/blob/main/SenseHat/IoTDataExample2.png' width="40%" height="40%">
 
-
+Use AWS IoT to publish message and change the color on the sense-hat leds.
+The pi is looking for red, green and/or blue in the meesage.
 
