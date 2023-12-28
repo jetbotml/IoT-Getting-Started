@@ -1,0 +1,67 @@
+{
+
+  "Version": "2012-10-17",
+
+  "Statement": [
+
+    {
+
+      "Effect": "Allow",
+
+      "Action": "iot:Publish",
+
+      "Resource": [
+
+        "arn:aws:iot:us-east-1:XXXXXXXXXXXX:topic/mypi/publish",
+
+        "arn:aws:iot:us-east-1:XXXXXXXXXXXX:topic/mypi/subscribe"
+
+      ]
+
+    },
+
+    {
+
+      "Effect": "Allow",
+
+      "Action": "iot:Subscribe",
+
+      "Resource": "arn:aws:iot:us-east-1:XXXXXXXXXXXX:topicfilter/mypi/subscribe"
+
+    },
+
+    {
+
+      "Effect": "Allow",
+
+      "Action": [
+
+        "iot:Receive",
+
+        "iot:PublishRetain"
+
+      ],
+
+      "Resource": [
+
+        "arn:aws:iot:us-east-1:XXXXXXXXXXXX:topic/mypi/publish",
+
+        "arn:aws:iot:us-east-1:XXXXXXXXXXXX:topic/mypi/subscribe"
+
+      ]
+
+    },
+
+    {
+
+      "Effect": "Allow",
+
+      "Action": "iot:Connect",
+
+      "Resource": "arn:aws:iot:us-east-1:XXXXXXXXXXXX:client/basicPubSub"
+
+    }
+
+  ]
+
+}
