@@ -38,8 +38,7 @@ import uuid
 
 sense = SenseHat()
 
-
-ScriptVersion = "20231126.0"
+ScriptVersion = "20231227.0"
 
 def get_ip_address():
 	ip_address = '';
@@ -65,10 +64,16 @@ def addPiDeviceData():
 	devicemessage['mac'] = get_mac()
 
 	cmd = "cat /proc/device-tree/model"
-	devicemessage['HW'] = subprocess.check_output(cmd, shell=True).decode("utf-8") 
+	input_string = subprocess.check_output(cmd, shell=True).decode("utf-8")
+	devicemessage['HW'] = input_string.replace("\x00", "")
 
-	pversion = sys.version
-	devicemessage['Python'] = sys.version
+	input_string = sys.version
+	index_of_open_parenthesis = input_string.find("(")
+	if index_of_open_parenthesis != -1:
+	    # Extract the substring before the opening parenthesis
+	    devicemessage['Python'] = input_string[:index_of_open_parenthesis].strip()
+	else:
+	    devicemessage['Python'] = sys.version
 
 	cmd = "top -bn1 | grep load | awk '{printf \" %.2f\", $(NF-2)}'"
 	devicemessage['CPU'] = subprocess.check_output(cmd, shell=True).decode("utf-8")
@@ -89,7 +94,7 @@ def addPiDeviceData():
 
 	devicemessage['SenseHat humidity'] = round(sense.get_humidity(), 1)
 
-	return devicemessage 
+	return devicemessage
 
 
 # My Code -----------------------------
@@ -126,10 +131,35 @@ def on_resubscribe_complete(resubscribe_future):
 # Callback when the subscribed topic receives a message
 def on_message_received(topic, payload, dup, qos, retain, **kwargs):
     print("Received message from topic '{}': {}".format(topic, payload))
+    print(payload)
+    # Process the message payload
+    # Add your own processing logic here based on the payload content
+    if topic == message_Subtopic:
+        message = str(payload)
+        # Example processing for a specific topic
+        if "red" in message:
+            sense.clear([255, 0, 0])
+            print("red found")
+        elif "green" in message:
+            sense.clear([0, 255, 0])
+            print("greenfound")
+        elif "blue" in message:
+            sense.clear([0, 0, 255])
+            print("bluefound")
+        elif "clear" in message:
+            sense.clear(0, 0, 0)
+            print("clearfound")
+        else:
+            print("Unknown command received")
+            sense.show_message("Unknown", text_colour=[255, 0, 0])
+            time.sleep(1)            
+            sense.clear(0, 0, 0)
+
     global received_count
     received_count += 1
     if received_count == cmdData.input_count:
         received_all_event.set()
+
 
 # Callback when the connection successfully connects
 def on_connection_success(connection, callback_data):
@@ -180,14 +210,17 @@ if __name__ == '__main__':
     connect_future.result()
     print("Connected!")
 
-    message_count = cmdData.input_count
-    message_topic = cmdData.input_topic
+    message_count = 0
+    message_topic = "mypi/publish"
+    message_Subtopic = "mypi/subscribe"
     message_string = cmdData.input_message
+    print(message_topic)
+    print(message_Subtopic)
 
     # Subscribe
-    print("Subscribing to topic '{}'...".format(message_topic))
+    print("Subscribing to topic '{}'...".format(message_Subtopic))
     subscribe_future, packet_id = mqtt_connection.subscribe(
-        topic=message_topic,
+        topic=message_Subtopic,
         qos=mqtt.QoS.AT_LEAST_ONCE,
         callback=on_message_received)
 
