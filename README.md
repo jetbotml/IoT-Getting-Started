@@ -67,3 +67,5 @@
   
 1. Copy updated file to mystart.sh location
 
+## Use Sense-hat to added additional data and subscribe to message to process on the pi.
+- See next section https://github.com/jetbotml/IoT-Getting-Started/tree/main/SenseHat
