@@ -24,6 +24,7 @@ Install the Sense HAT software by opening a Terminal window and entering the fol
 2. Change IoT Policy to https://github.com/jetbotml/IoT-Getting-Started/blob/main/SenseHat/policy.txt
 
 example data
+
   <img src='https://github.com/jetbotml/IoT-Getting-Started/blob/main/SenseHat/IoTDataExample2.png' width="30%" height="30%">
 
 3. Subscribe to message to process on the pi
