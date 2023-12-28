@@ -19,8 +19,9 @@ Install the Sense HAT software by opening a Terminal window and entering the fol
 - **sudo apt-get install sense-hat**
 - **sudo reboot**
 
-### Use
+### publish Sense HAT data 
 Example IoT data from https://github.com/jetbotml/IoT-Getting-Started/blob/main/SenseHat/myshpubsub.py
+Change IoT Policy to https://github.com/jetbotml/IoT-Getting-Started/blob/main/SenseHat/policy.txt
 
 <img src='https://github.com/jetbotml/IoT-Getting-Started/blob/main/SenseHat/IoTDataExample.png' width="40%" height="40%">
 
