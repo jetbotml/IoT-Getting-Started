@@ -38,7 +38,7 @@ import uuid
 
 sense = SenseHat()
 SleepTime = 60
-ScriptVersion = "20231227.0"
+ScriptVersion = "20240105.0"
 
 def get_ip_address():
 	ip_address = '';
