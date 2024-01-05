@@ -1,3 +1,6 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: Apache-2.0.
+
 from awscrt import mqtt, http
 from awsiot import mqtt_connection_builder
 import sys
@@ -34,7 +37,7 @@ import socket
 import uuid
 
 sense = SenseHat()
-
+SleepTime = 60
 ScriptVersion = "20231227.0"
 
 def get_ip_address():
@@ -244,7 +247,7 @@ if __name__ == '__main__':
                 topic=message_topic,
                 payload=message_json,
                 qos=mqtt.QoS.AT_LEAST_ONCE)
-            time.sleep(10)
+            time.sleep(SleepTime)
             publish_count += 1
 
     # Wait for all messages to be received.
