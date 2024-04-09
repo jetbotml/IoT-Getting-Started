@@ -25,17 +25,23 @@ Update 04/08/24
     - Use Raspberry Pi Imager (https://www.raspberrypi.com/software/)
     - Select Raspberry Pi OS (64 bit)
 1. Boot the Pi and follow instructions
-1. sudo apt-get update && sudo apt-get upgrade -y
+    ~~~
+    sudo apt-get update && sudo apt-get upgrade -y
+    ~~~
 1. Install AWS CLI
-    - sudo apt install awscli -y
-    - run aws configure - input the access key and secret
-    - test run aws s3 ls
+    ~~~
+    sudo apt install awscli -y
+    run aws configure - input the access key and secret
+    test run aws s3 ls
+    ~~~
 1. Install SSM Agent
-    - sudo curl https://s3.us-east-2.amazonaws.com/amazon-ssm-us-east-2/latest/debian_arm64/amazon-ssm-agent.deb -o amazon-ssm-agent.deb
-    - sudo dpkg -i amazon-ssm-agent.deb
-    - sudo service amazon-ssm-agent stop
-    - sudo amazon-ssm-agent -register -code "activation-code" -id "activation-id" -region "us-east-1"
-    - sudo service amazon-ssm-agent start
+    ~~~
+    sudo curl https://s3.us-east-2.amazonaws.com/amazon-ssm-us-east-2/latest/debian_arm64/amazon-ssm-agent.deb -o amazon-ssm-agent.deb
+    sudo dpkg -i amazon-ssm-agent.deb
+    sudo service amazon-ssm-agent stop
+    sudo amazon-ssm-agent -register -code "activation-code" -id "activation-id" -region "us-east-1"
+    sudo service amazon-ssm-agent start
+    ~~~
 
 ## Connect a Raspberry Pi to AWS IoT Core
 1. Select Connect a device button
