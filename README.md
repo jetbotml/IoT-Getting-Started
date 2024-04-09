@@ -1,6 +1,6 @@
 # AWS IoT using a Raspberry Pi
 
-Update 12/28/23
+Update 04/08/24
 
 ## Prep AWS: Create AWS S3 bucket, IAM role and (optional) SSM activation
 
@@ -25,6 +25,7 @@ Update 12/28/23
     - Use Raspberry Pi Imager (https://www.raspberrypi.com/software/)
     - Select Raspberry Pi OS (64 bit)
 1. Boot the Pi and follow instructions
+1. sudo apt-get update && sudo apt-get upgrade -y
 1. Install AWS CLI
     - sudo apt install awscli -y
     - run aws configure - input the access key and secret
