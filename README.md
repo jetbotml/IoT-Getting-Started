@@ -31,8 +31,14 @@ Update 04/08/24
 1. Install AWS CLI
     ~~~
     sudo apt install awscli -y
-    run aws configure - input the access key and secret
-    test run aws s3 ls
+    ~~~
+ 1. input the access key and secret
+    ~~~
+    aws configure
+    ~~~
+    test by running the following 
+    ~~~
+    aws s3 ls
     ~~~
 1. Install SSM Agent
     ~~~
