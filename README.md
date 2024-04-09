@@ -67,8 +67,9 @@ Update 04/08/24
     - follow instructions and run the kit
 1. If using Pi OS bookworm - you may get an **error: externally-managed-environment**
    - https://www.makeuseof.com/fix-pip-error-externally-managed-environment-linux/
-    - **cd /usr/lib/python3.11**
-    - **sudo rm EXTERNALLY-MANAGED**
+    ~~~
+    sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
+    ~~~
 
 ## Send Pi system data to AWS IoT
 1. make a copy of the start.sh
