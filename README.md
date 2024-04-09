@@ -45,7 +45,13 @@ Update 04/08/24
     sudo curl https://s3.us-east-2.amazonaws.com/amazon-ssm-us-east-2/latest/debian_arm64/amazon-ssm-agent.deb -o amazon-ssm-agent.deb
     sudo dpkg -i amazon-ssm-agent.deb
     sudo service amazon-ssm-agent stop
-    sudo amazon-ssm-agent -register -code "activation-code" -id "activation-id" -region "us-east-1"
+    ~~~
+1. Register SSM Agent
+    ~~~
+    sudo amazon-ssm-agent -register -code "XXXactivation-code" -id "XXXactivation-id" -region "us-east-1"
+    ~~~
+1. Start SSM Agent
+    ~~~
     sudo service amazon-ssm-agent start
     ~~~
 
