@@ -63,7 +63,7 @@ Update 04/08/24
 1. Download connection kit
 1. Copy connection kit to your S3 bucket
 1. From your pi command line; download, unpack, setup and start the connection kit
-    - aws s3 cp s3//bucketnameXX/connection_device_package.zip ./
+    - aws s3 cp s3//bucketnameXX/ . --recursive
     - follow instructions and run the kit
 1. If using Pi OS bookworm - you may get an **error: externally-managed-environment**
    - https://www.makeuseof.com/fix-pip-error-externally-managed-environment-linux/
